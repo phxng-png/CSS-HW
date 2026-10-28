@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập thực hành HTML &amp; CSS</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    h2,
+    h3 {
+      color: #0f766e;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      letter-spacing: 0.4px;
+    }
+
+    h3 {
+      margin: 20px 0 10px;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+    }
+
+    ul.hobbies {
+      max-width: 340px;
+      margin: 0 auto;
+      padding-left: 22px;
+      list-style-type: square;
+      text-align: left;
+    }
+
+    ul.hobbies li {
+      margin-bottom: 8px;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+
+    ul.hobbies li:hover {
+      background-color: #e6f4f1;
+      color: #0f766e;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Bài tập thực hành HTML &amp; CSS</h1>
+
+  <main>
+
+    <section class="bai" id="bai1">
+      <h2>Bài 1: Thông tin cá nhân &amp; Danh sách sở thích</h2>
+
+      <div class="profile">
+        <img id="avatar"
+             src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTuxY7pqtL2fAQu3jTqwc9kciLWY_Jh20xbd5moAHEXNG4AWgBN"
+             alt="my pfp pic">
+        <h3 style="color: navy;">Duong Gia Phong</h3>
+
+        <p class="role">Sinh viên ngành Công nghệ thông tin</p>
+        <p>Mã sinh viên: 2510209010xx</p>
+        <p>Lớp: ICT4</p>
+        <p>Email: dngphxngk@gmail.com</p>
+        <p><a href="#">Xem trang cá nhân</a></p>
+      </div>
+
+      <h3>Danh sách sở thích</h3>
+      <ul class="hobbies">
+        <li>Chơi Game</li>
+        <li>Bóng đá</li>
+        <li>Nghe nhạc</li>
+        <li>Xem Phim</li>
+      </ul>
+    </section>
+
+    <section class="bai" id="bai2">
+<h2>Bài 2: Bảng điểm sinh viên</h2>
+
+        <div class="table-wrapper">
+        <span class="table-badge">BẢNG ĐIỂM</span>
+
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Môn học</th>
+              <th>Điểm</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Tiếng Anh cơ bản 3</td>
+              <td>7.0</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Triết học Mác - Lênin</td>
+              <td>6.5</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Pháp luật đại cương</td>
+              <td>7.5</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Toán rời rạc</td>
+              <td>6.0</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Chạy 2</td>
+              <td>7.0</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr class="average-row">
+              <td colspan="2">Điểm trung bình</td>
+              <td>6.8</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section class="bai" id="bai3">
+      <h2>Bài 3: Form đăng ký sinh viên</h2>
+
+      <div class="form-wrap">
+
+        <form class="register-form" action="#" method="post">
+          <span class="form-badge">ĐĂNG KÝ MỚI</span>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">Họ và tên</label>
+              <input type="text" id="fullname" name="fullname"
+                     placeholder="Lò Vi Sóng" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email"
+                     placeholder="test@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Số điện thoại</label>
+              <input type="tel" id="phone" name="phone"
+                     placeholder="0901234567">
+            </div>
+
+            <div class="form-group">
+              <label for="birthdate">Ngày sinh</label>
+              <input type="date" id="birthdate" name="birthdate">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <span class="group-label">Giới tính</span>
+            <div class="option-row">
+              <label><input type="radio" name="gender" value="nam" checked> Nam</label>
+              <label><input type="radio" name="gender" value="nu"> Nữ</label>
+              <label><input type="radio" name="gender" value="khac"> Khác</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <span class="group-label">Sở thích</span>
+            <div class="option-row">
+              <label><input type="checkbox" name="hobby" value="doc-sach" checked> Đọc sách</label>
+              <label><input type="checkbox" name="hobby" value="the-thao"> Thể thao</label>
+              <label><input type="checkbox" name="hobby" value="am-nhac"> Âm nhạc</label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Đăng ký</button>
+            <button type="reset" class="btn btn-secondary">Nhập lại</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
